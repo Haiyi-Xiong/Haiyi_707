@@ -2639,17 +2639,3 @@ The exclusion table distinguishes sparse predictors from zero-variance columns a
 ### Conclusion and limitations
 
 The selected model is **`r best_model_name`**, chosen by highest mean outer-fold AUROC among the three fitted candidates, with Brier score breaking ties. Its mean AUROC is `r sprintf('%.4f', selected_row$Mean_AUROC)` and mean Brier score is `r sprintf('%.4f', selected_row$Mean_Brier)`. Each candidate is refitted on full set-a, and the selected candidate is exported. Choosing the winner on these CV results can introduce selection optimism. Ridge is simpler and its standardized coefficients are more directly interpretable; GAM helps visualize nonlinearity. Benchmark differences are quantified above. All estimates are internal to set-a. They do not establish clinical utility or generalization to another hospital, population or period. Follow-up work should evaluate calibration, decision curves and subgroups, which are deferred to Checkpoint 3.
-
-### Reproducibility and outputs
-
-Only relative paths are used. All results come from the set-a patient files and `Outcomes-a.txt`; random seeds and common CV folds are defined above. The fitted preprocessing and selected model are saved as `output/cp2_final_model.rds`, alongside `output/cp2_oof_predictions.csv`, figure files and the fold-level model comparison. Generate this report from a fresh repository checkout using `pixi run --locked checkpoint2` once the environment and data are in place. The command should produce `output/checkpoint2.html`.
-
-```{r}
-runtime_minutes <- as.numeric(difftime(Sys.time(), run_started, units = "mins"))
-write.csv(data.frame(Elapsed_minutes = runtime_minutes, R = R.version.string),
-          "output/cp2_runtime.csv", row.names = FALSE)
-writeLines(capture.output(sessionInfo()), "output/cp2_session_info.txt")
-```
-
-This execution took `r sprintf("%.1f", runtime_minutes)` minutes. Runtime and session information are saved for reproducibility.
-
