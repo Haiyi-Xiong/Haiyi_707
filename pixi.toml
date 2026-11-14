@@ -29,3 +29,7 @@ deno = ">=2.4.5,<2.5"
 checkpoint1 = "Rscript checkpoint1.R"
 
 checkpoint2 = "quarto render checkpoint2.qmd --output-dir output"
+
+[target.win-64.activation]
+scripts = ["scripts/quarto_windows.bat"]
+

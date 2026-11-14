@@ -1,0 +1,2 @@
+"Model","Criterion"
+"Random Forest","Highest mean AUROC; Brier breaks ties"
