@@ -24,13 +24,6 @@ Data source: [PhysioNet Challenge 2012](https://physionet.org/content/challenge-
 Raw data are kept outside version control. Each set directory must contain its 4,000 extracted individual `.txt` records, rather than only a compressed archive.
 
 ```text
-data/
-  set-a/
-  set-b/
-  set-c/
-  Outcomes-a.txt
-  Outcomes-b.txt
-  Outcomes-c.txt
 
 checkpoint1.R
 checkpoint2.qmd
