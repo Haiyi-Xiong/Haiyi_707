@@ -1,0 +1,3 @@
+Set,Stays,Deaths,Death_rate,Mean_risk,SAPS_missing,SOFA_missing
+set-b,4000,568,0.142,0.149773,162,137
+set-c,4000,585,0.14625,0.15026916666666668,166,122
