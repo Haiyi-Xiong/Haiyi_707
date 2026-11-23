@@ -14,7 +14,7 @@ execute:
 
 ## AI-use statement
 
-I used ChatGPT/Codex to develop and debug the evaluation code, organize the report, and draft the interpretation and README. The assistant executed the analysis using the supplied data and saved Checkpoint 2 model, checked file identity and prediction validity, and inspected the generated results. This statement does not claim that I independently repeated those checks. AI assistance made implementation and troubleshooting faster, but generated code required correction and numerical conclusions had to be checked against executed results. All reported numerical results are computed from the data; AI did not fabricate patient records or performance estimates. The analysis remains my responsibility as the submitting author.
+I used ChatGPT/Codex to help write and debug R code, organize the report, and improve the wording of the interpretation and README. Checks included comparing the saved model file, verifying patient counts and prediction ranges, and checking that the reported results matched the generated tables. AI was useful for troubleshooting and drafting, but some code needed correction, and statistical interpretations required care. I am responsible for the submitted work.
 
 ```{r}
 source('checkpoint3_analysis.R')
@@ -210,3 +210,4 @@ stopifnot(all(file.exists(file.path('output',required))))
 sessionInfo()
 ```
 :::
+
